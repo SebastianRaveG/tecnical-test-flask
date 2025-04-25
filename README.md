@@ -142,3 +142,29 @@ flask --app run:create_app run
 - Principios SOLID.
 
 
+SELECT
+    sp.id AS store_product_id,
+    p.id AS product_id,
+    p.name AS product_name,
+    sp.price,
+    sp.inventory
+FROM
+    store_product sp
+INNER JOIN
+    product p ON sp.product_id = p.id
+WHERE
+    sp.store_id = <store_id>;
+
+SELECT
+    sp.id AS store_product_id,
+    p.id AS product_id,
+    p.name AS product_name,
+    sp.price,
+    sp.inventory
+FROM
+    store_product sp
+INNER JOIN
+    product p ON sp.product_id = p.id
+WHERE
+    sp.store_id = <store_id>
+    AND sp.product_id = <product_id>;
