@@ -11,7 +11,7 @@ load_dotenv()
 
 def create_app():
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://asdasd:asdasd@asdasd:5433/asdasd'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:e4ZXY8YyHBhPhj9f@192.168.20.34:5433/tecnical_test'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     init_app(app)
@@ -22,4 +22,4 @@ def create_app():
 
     return app
 
-app = create_app()  # <- Esto es necesario para los comandos de Flask
+app = create_app() 

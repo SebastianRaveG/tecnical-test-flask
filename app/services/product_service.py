@@ -7,7 +7,7 @@ def create_product(name):
     db.session.add(product)
     try:
         db.session.commit()
-        return {"message": "Product created", "product": {"id": product.id, "name": product.name}}, 201
+        return {"message": "Product created", "product": {"id": product.id, "name": product.name}}
     except IntegrityError:
         db.session.rollback()
         return {"error": "Product with this name already exists."}, 400
